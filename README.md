@@ -1,6 +1,6 @@
 # Isaure Leclercq — personal portfolio
 
-A small, build-tool-free portfolio for GitHub Pages. The design is an editorial project journal: warm paper, forest green, a bright chartreuse accent, and an abstract orbit illustration. Project cards are generated from JSON, so new work can be added without editing the layout.
+A small, build-tool-free portfolio for GitHub Pages. The design is an editorial project journal: warm parchment, moss green, and marigold accents, and an abstract orbit illustration. Project cards are generated from JSON, so new work can be added without editing the layout.
 
 ## Personalize the introduction
 
@@ -19,7 +19,7 @@ Add an object to the array in `projects.json`:
     "description": "A short, one or two sentence introduction to the project.",
     "cover": "assets/project-cover.jpg",
     "coverAlt": "A concise description of the project image",
-    "color": "#d8dfbd",
+    "color": "#e4e6da",
     "mark": "P",
     "url": "https://example.com/project",
     "links": [
