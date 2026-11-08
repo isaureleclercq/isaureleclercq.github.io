@@ -28,7 +28,7 @@ const makeProjectCard = (project, index) => {
   } else {
     const placeholder = document.createElement('span');
     placeholder.className = 'project-placeholder';
-    placeholder.style.setProperty('--cover', project.color || '#cdd6b1');
+    placeholder.style.setProperty('--cover', project.color || '#e4e6da');
     const mark = document.createElement('span');
     mark.className = 'placeholder-mark';
     mark.textContent = project.mark || project.title.slice(0, 1);
