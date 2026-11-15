@@ -43,6 +43,14 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000`.
 
+## Learn how the site works
+
+Open `http://localhost:8000/course/` for **Build your corner of the web**, an eight-lesson HTML course based on this portfolio. It covers local setup, HTML, CSS, responsive layouts, JavaScript, JSON project cards, accessibility, and GitHub Pages.
+
+Each lesson includes a practical exercise, a worked solution, a knowledge check, a YouTube reference, and further reading. The course also includes an HTML/CSS workbench. Progress, exercise checkboxes, and workbench code are saved in the current browser using local storage; workbench experiments do not edit the portfolio files. Clear browser site data to reset saved course data.
+
+The course lives in `course/index.html`, `course/course.css`, and `course/course.js`. It uses the same static server as the portfolio and needs no additional dependencies. All lesson text remains readable without JavaScript; interactive features require it. Videos open on YouTube. The course has not been published until its files are committed and pushed to the publishing branch.
+
 ## Publish with GitHub Pages
 
 This site repository is **`isaureleclercq.github.io`**. In the repository, open **Settings → Pages** and choose **Deploy from a branch**, then select **main** and **/(root)**. GitHub Pages publishes the site at **https://isaureleclercq.github.io**. The first deploy can take a few minutes.

@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f2ea"><meta name="description" content="An eight-lesson, hands-on course for building a personal portfolio with HTML, CSS, JavaScript, JSON, and GitHub Pages. Includes exercises, solutions, and YouTube references.">
+<title>Build your corner of the web — A practical portfolio course</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="course.css"><script src="course.js" defer></script></head>
+<body><a class="skip" href="#main">Skip to lesson content</a>
+<header class="topbar"><a class="brand" href="#overview" aria-label="Field Notes course overview"><span class="brand-mark" aria-hidden="true">i.</span><span>Isaure Leclercq</span><span class="brand-divider" aria-hidden="true"></span><span class="brand-label">Field notes</span></a>
+<nav class="top-links" aria-label="Course tools"><a href="#workbench" class="workbench-top">Code workbench <span aria-hidden="true">↗</span></a><a href="../index.html" class="portfolio-link" target="_blank" rel="noopener">View the portfolio ↗</a></nav></header>
+<button class="mobile-menu js-only" data-menu aria-expanded="false" aria-controls="course-navigation" type="button"><span>Course contents</span><span aria-hidden="true">☰</span></button>
+<div class="shell"><aside class="sidebar" id="course-navigation" aria-label="Course navigation"><a class="overview-link" href="#overview" data-page-link aria-current="page"><span class="overview-icon" aria-hidden="true">▤</span> The course</a>
+<p class="eyebrow">Your learning path</p><nav aria-label="Lessons"><ol class="lesson-nav"><li><a class="lesson-link" data-page-link href="#lesson-1"><span class="lesson-num">01</span><span>Meet your website<span class="sr-only" data-complete-label></span><span class="lesson-sub">Your starting point</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-2"><span class="lesson-num">02</span><span>Give content a structure<span class="sr-only" data-complete-label></span><span class="lesson-sub">HTML foundations</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-3"><span class="lesson-num">03</span><span>Make it feel like you<span class="sr-only" data-complete-label></span><span class="lesson-sub">CSS foundations</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-4"><span class="lesson-num">04</span><span>Design for every screen<span class="sr-only" data-complete-label></span><span class="lesson-sub">Responsive design</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-5"><span class="lesson-num">05</span><span>Bring the page to life<span class="sr-only" data-complete-label></span><span class="lesson-sub">JavaScript &amp; the DOM</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-6"><span class="lesson-num">06</span><span>Turn data into projects<span class="sr-only" data-complete-label></span><span class="lesson-sub">JSON &amp; fetch</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-7"><span class="lesson-num">07</span><span>Make it work for people<span class="sr-only" data-complete-label></span><span class="lesson-sub">Accessibility &amp; testing</span></span></a></li><li><a class="lesson-link" data-page-link href="#lesson-8"><span class="lesson-num">08</span><span>Share it with the world<span class="sr-only" data-complete-label></span><span class="lesson-sub">Git &amp; GitHub Pages</span></span></a></li></ol></nav>
+<div class="sidebar-bottom"><p class="progress-label"><span>Your progress</span><strong data-progress-count>0 / 8</strong></p><progress data-progress max="8" value="0" aria-label="Lessons completed"></progress>
+<p class="storage-note" data-storage-note>Progress stays in this browser. No account needed.</p><a class="sidebar-tool" href="#workbench" data-page-link><span aria-hidden="true">&lt;/&gt;</span> Open the workbench ↗</a></div></aside>
+<main class="main" id="main" tabindex="-1"><p class="breadcrumb">FIELD NOTES <span>/</span> <span data-breadcrumb>Course overview</span></p>
+<noscript><p class="no-script">All lessons are available below. Enable JavaScript for saved progress, quick checks, and the interactive workbench. You can do the exercises in your own code editor.</p></noscript>
+<section class="page" id="overview" data-title="Course overview"><div class="overview-hero"><div class="hero-copy"><p class="badge">A practical course for curious beginners</p>
+<h1 tabindex="-1">Build your own<br><em>corner of<br>the web.</em></h1>
+<p class="hero-description">A little code. A lot of possibility. Learn to build a personal portfolio like this one, one small, satisfying step at a time.</p>
+<div class="hero-actions"><a class="button" href="#lesson-1" data-resume><span>Start the first lesson</span> <b aria-hidden="true">↗</b></a><span class="hero-note">No coding experience needed</span></div></div>
+<div class="hero-visual" aria-label="Illustration of a small portfolio with an introduction and three project covers" role="img"><span class="visual-caption">Your ideas live here. ↙</span><div class="mini-browser"><div class="browser-bar"><i></i><i></i><i></i><span>my-little-corner.html</span></div><div class="mini-page"><div class="mini-brand">i.</div><div class="mini-hero"><p>Hello, I’m<br><em>a maker.</em></p><div class="mini-sun"></div></div><div class="mini-caption">A few things I’ve been working on</div><div class="mini-projects"><div>A</div><div>✳</div><div>B</div></div></div></div><div class="code-sticker"><span>&lt;h1&gt;</span>Hello, world.<span>&lt;/h1&gt;</span><br><span>↳</span> Start small. Make it yours.</div></div></div>
+<div class="facts"><div class="fact"><strong>8 lessons</strong><span>From first file to published site</span></div><div class="fact"><strong>~4¼ hours</strong><span>Reading + making, at your pace</span></div><div class="fact"><strong>One real website</strong><span>HTML · CSS · JavaScript</span></div></div>
+<div class="section-title"><h2>A path from idea to internet.</h2><p>Learn a little. Make a little.</p></div><div class="curriculum"><a class="curriculum-row" href="#lesson-1"><span class="row-number">01</span><span class="row-title">Meet your website<span class="row-description">Find your way around the files and run a local preview.</span></span><span class="row-time">20 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-2"><span class="row-number">02</span><span class="row-title">Give content a structure<span class="row-description">Build a page with headings, sections, links, and images.</span></span><span class="row-time">30 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-3"><span class="row-number">03</span><span class="row-title">Make it feel like you<span class="row-description">Use color, typography, spacing, and reusable styles.</span></span><span class="row-time">35 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-4"><span class="row-number">04</span><span class="row-title">Design for every screen<span class="row-description">Arrange content with Flexbox, Grid, and media queries.</span></span><span class="row-time">35 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-5"><span class="row-number">05</span><span class="row-title">Bring the page to life<span class="row-description">Find page elements, update text, and respond to clicks.</span></span><span class="row-time">35 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-6"><span class="row-number">06</span><span class="row-title">Turn data into projects<span class="row-description">Load content from JSON and render reusable project cards.</span></span><span class="row-time">40 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-7"><span class="row-number">07</span><span class="row-title">Make it work for people<span class="row-description">Check keyboard access, contrast, images, and error states.</span></span><span class="row-time">30 min</span><span aria-hidden="true">↗</span></a><a class="curriculum-row" href="#lesson-8"><span class="row-number">08</span><span class="row-title">Share it with the world<span class="row-description">Save a version, publish with GitHub Pages, and check the result.</span></span><span class="row-time">30 min</span><span aria-hidden="true">↗</span></a></div>
+<section class="capstone" aria-labelledby="capstone-title"><span class="capstone-star" aria-hidden="true">✳</span><div><h3 id="capstone-title">Your final project: a place for your work.</h3><p>You’ll personalize the introduction, add three projects, make the layout work on a phone, and learn to publish it with GitHub Pages. Each lesson includes an exercise, a solution, a quick check, and a YouTube companion.</p></div></section>
+<p class="workbench-challenge">Bring a browser, a plain-text code editor, and curiosity. Use the existing portfolio as your starting point. Videos are optional and add to the time estimate. Want a longer reference? Try <a href="https://www.youtube.com/watch?v=G3e-cpL7ofc" target="_blank" rel="noopener">SuperSimpleDev’s HTML &amp; CSS Full Course ↗</a>.</p></section>
+<article class="page" id="lesson-1" data-lesson data-title="Meet your website">
+      <header class="lesson-header"><p class="eyebrow">Lesson 01 / 08 · Your starting point · ~20 min</p>
+      <h1 tabindex="-1">A few files. A whole website.</h1><p class="lesson-intro">A website starts as a folder. In this lesson, you’ll learn what each file does, open the portfolio on your computer, and make your first small change.</p>
+      <ul class="objectives"><li>Understand the file structure</li><li>Run a local server</li><li>Make your first edit</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>Meet the three building blocks</h2>
+ <p><strong>HTML</strong> describes the content: headings, paragraphs, navigation, and images. <strong>CSS</strong> decides how that content looks and fits together. <strong>JavaScript</strong> adds behavior, including loading the introduction and project cards.</p>
+ <p>This portfolio is a <strong>static website</strong>. A server sends its files to your browser, and the browser displays them. There is no database, login, or build step. You can learn how the whole thing works by opening a handful of files.</p>
+ <div class="flow" aria-label="HTML is structure, CSS is appearance, JavaScript is behavior"><span>HTML · structure</span><b>+</b><span>CSS · appearance</span><b>+</b><span>JS · behavior</span></div>
+ <h2>A map of this project</h2>
+ <div class="file-map">
+ <div class="file-row"><code>index.html</code><span>The page: navigation, introduction, project area, About section, and footer.</span></div>
+ <div class="file-row"><code>styles.css</code><span>Colors, typography, spacing, and layouts for different screens.</span></div>
+ <div class="file-row"><code>script.js</code><span>Loads the JSON files and builds the project cards.</span></div>
+ <div class="file-row"><code>site.json</code><span>Your name, introduction, and About text.</span></div>
+ <div class="file-row"><code>projects.json</code><span>A list of your projects. An empty list looks like <code>[]</code>.</span></div>
+ <div class="file-row"><code>assets/</code><span>Images and the small browser-tab icon, called a favicon.</span></div>
+ </div>
+ <h2>Open the project locally</h2>
+ <p>You need a browser, a plain-text code editor, and Python 3. The local environment for this project already has Python. Open the project folder in your editor. In a terminal, go to the same folder and start a server. Replace the example path below with your project folder:</p>
+ <div class="code-block"><div class="code-top">Terminal · macOS</div><pre><code>cd &quot;/path/to/your/portfolio&quot;
+python3 -m http.server 8000 --bind 127.0.0.1</code></pre></div>
+ <p>Visit <a href="http://localhost:8000/" target="_blank" rel="noopener">localhost:8000</a>. If this course is already running there, the server is already started. Keep its terminal open while working. To stop a server you started, press <kbd>Ctrl</kbd> + <kbd>C</kbd> in that terminal.</p>
+ <div class="note"><strong>Why a server?</strong> Double-clicking an HTML file opens a <code>file://</code> URL. Browsers restrict requests from these pages, so fetching the JSON can fail. A local <code>http://</code> address lets the files work together.</div>
+ <p>On another computer, replace the folder path with your own. If port 8000 is busy, reuse the existing preview or start on port 8001 and visit <code>http://localhost:8001</code>. On Windows, <code>py -m http.server 8000 --bind 127.0.0.1</code> is a common equivalent when Python is installed.</p>
+ <h2>Make the edit → save → refresh loop</h2>
+ <p>Open <code>site.json</code> and find <code>"intro"</code>. Change only the words inside its quotation marks. Save the file and refresh the <em>portfolio</em> tab. You should see your new introduction. This server does not automatically refresh the browser.</p>
+ <p>Keep this course open in another tab. For bigger experiments, make a copy of the project folder first. You can also use the course’s <a href="#workbench">workbench</a> without changing the portfolio files.</p><section class="exercise" aria-labelledby="exercise-1"><p class="eyebrow">Make it yours · exercise 01</p>
+    <h2 id="exercise-1">Your first personal touch</h2><p>Change the introduction to one sentence about something you enjoy making. Keep the JSON valid.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-1-0"><span>Find all five main files in your code editor.</span></label></li><li><label><input type="checkbox" data-check="lesson-1-1"><span>Edit the intro value in site.json, then save it.</span></label></li><li><label><input type="checkbox" data-check="lesson-1-2"><span>Refresh the portfolio and confirm that your sentence appears.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><p>For example, the <code>intro</code> entry could look like this. Keep the comma if another property follows it. Replace just this entry, not the entire file.</p><div class="code-block"><div class="code-top">site.json · one property</div><pre><code>&quot;intro&quot;: &quot;I make visual stories, small experiments, and things that spark curiosity.&quot;,</code></pre></div><p>If nothing changes, check that you saved the correct file and refreshed the portfolio rather than the course. If the original copy returns, check your commas and double quotes.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="1" data-explanation="The script reads the intro property from site.json and puts it into the page.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>Which file should you edit to change the introduction?</legend><label><input type="radio" name="quiz-1" value="0"><span>styles.css</span></label><label><input type="radio" name="quiz-1" value="1"><span>site.json</span></label><label><input type="radio" name="quiz-1" value="2"><span>projects.json</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-1" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-2">Next lesson →</a></div><p class="completion-message" id="lesson-1-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 1 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=kUMe1FH4CHE" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">HTML / getting started</span></div>
+      <div class="video-info"><small>freeCodeCamp.org · Dave Gray</small><strong>Learn HTML – Full Tutorial for Beginners</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Use the getting-started and document-head chapters. The full video is a longer optional reference.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server" target="_blank" rel="noopener">MDN · What is a web server? ↗</a></aside></div></article><article class="page" id="lesson-2" data-lesson data-title="Give content a structure">
+      <header class="lesson-header"><p class="eyebrow">Lesson 02 / 08 · HTML foundations · ~30 min</p>
+      <h1 tabindex="-1">Start with meaning.</h1><p class="lesson-intro">Before choosing a color or a font, give the page a clear structure. HTML tells the browser what each piece of content means.</p>
+      <ul class="objectives"><li>Read HTML elements</li><li>Use semantic sections</li><li>Connect links and IDs</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>Read an HTML element</h2>
+ <p>An element usually has an opening tag, some content, and a closing tag. In <code>&lt;h1&gt;Hello, I’m Isaure.&lt;/h1&gt;</code>, the tags make the text a heading. An <strong>attribute</strong> gives an element extra information, such as the destination of a link.</p><div class="code-block"><div class="code-top">HTML · a link</div><pre><code>&lt;a href=&quot;#about&quot;&gt;A little about me&lt;/a&gt;</code></pre></div>
+ <p><code>a</code> means anchor, <code>href</code> is its destination, and the text between the tags is the link label. A destination starting with <code>#</code> points to an element with a matching <code>id</code> on the same page.</p>
+ <h2>Build the document skeleton</h2>
+ <p>The <code>head</code> contains information for the browser. The <code>body</code> contains the page people see. The title appears in the browser tab, while the viewport setting lets the layout use a phone’s actual screen width. This is a small complete example, not a replacement for your existing file:</p><div class="code-block"><div class="code-top">index.html · minimal example</div><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;My portfolio&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+    &lt;script src=&quot;script.js&quot; defer&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;&lt;nav&gt;&lt;a href=&quot;#work&quot;&gt;Work&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;
+    &lt;main&gt;
+      &lt;h1&gt;Hello, I’m Isaure.&lt;/h1&gt;
+      &lt;section id=&quot;work&quot;&gt;
+        &lt;h2&gt;Selected work&lt;/h2&gt;
+        &lt;p&gt;A collection of things I’m making.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;Made with curiosity.&lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+ <h2>Choose elements by their purpose</h2>
+ <p><code>header</code> introduces the page; <code>nav</code> groups its main navigation links; <code>main</code> contains the main content. A <code>section</code> groups a topic and usually has a heading. An <code>article</code> works well for a project card that makes sense on its own.</p>
+ <p>Use one clear <code>h1</code> for the page title, <code>h2</code> for its main sections, and <code>h3</code> for headings within those sections. Choose the heading level for the document’s structure; CSS will handle its visual size.</p>
+ <h2>Follow paths and hooks</h2>
+ <p>A <code>class</code> can be shared by many elements and is useful for styling. An <code>id</code> must identify one element on the page. This project also uses attributes such as <code>data-intro</code> so JavaScript can find specific content.</p>
+ <p>A relative path is resolved from the current page. From the portfolio’s root page, <code>assets/cover.jpg</code> points into the assets folder. From this course folder, <code>../index.html</code> goes up one level to the portfolio.</p><div class="code-block"><div class="code-top">HTML · an image</div><pre><code>&lt;img src=&quot;assets/cover.jpg&quot; alt=&quot;Green and cream poster with oversized serif lettering&quot;&gt;</code></pre></div>
+ <p>Images do not have a closing tag. Their <code>alt</code> text describes the useful information in the image. We’ll return to this in the accessibility lesson.</p><section class="exercise" aria-labelledby="exercise-2"><p class="eyebrow">Make it yours · exercise 02</p>
+    <h2 id="exercise-2">Add a small “Now” section</h2><p>In index.html, add a section just before the closing &lt;/main&gt; tag. Then add a link to it in the main navigation.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-2-0"><span>Create a section with id=&quot;now&quot;, a heading, and a sentence about what you are learning.</span></label></li><li><label><input type="checkbox" data-check="lesson-2-1"><span>Add a navigation link whose href is #now.</span></label></li><li><label><input type="checkbox" data-check="lesson-2-2"><span>Click the link and confirm it moves to the new section.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><div class="code-block"><div class="code-top">index.html · inside main</div><pre><code>&lt;section class=&quot;wrap&quot; id=&quot;now&quot; aria-labelledby=&quot;now-title&quot;&gt;
+  &lt;h2 id=&quot;now-title&quot;&gt;What I’m learning&lt;/h2&gt;
+  &lt;p&gt;I’m learning how to turn ideas into websites.&lt;/p&gt;
+&lt;/section&gt;</code></pre></div><div class="code-block"><div class="code-top">index.html · inside the existing nav</div><pre><code>&lt;a href=&quot;#now&quot;&gt;Now&lt;/a&gt;</code></pre></div><p>The <code>href</code> and section <code>id</code> match. <code>aria-labelledby</code> uses the heading’s ID to give the section an accessible name. Styling comes next.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="2" data-explanation="A hash link targets an ID on the current page, so the destination needs id=&quot;work&quot;.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>What does href=&quot;#work&quot; point to?</legend><label><input type="radio" name="quiz-2" value="0"><span>A file named work.html</span></label><label><input type="radio" name="quiz-2" value="1"><span>An element with class=&quot;work&quot;</span></label><label><input type="radio" name="quiz-2" value="2"><span>The element with id=&quot;work&quot;</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-2" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-3">Next lesson →</a></div><p class="completion-message" id="lesson-2-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 2 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=kUMe1FH4CHE" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">HTML / structure</span></div>
+      <div class="video-info"><small>freeCodeCamp.org · Dave Gray</small><strong>Learn HTML – Full Tutorial for Beginners</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Focus on text, links, images, and semantic tags. Pause and write a small example after each topic.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noopener">MDN · Structuring content with HTML ↗</a></aside></div></article><article class="page" id="lesson-3" data-lesson data-title="Make it feel like you">
+      <header class="lesson-header"><p class="eyebrow">Lesson 03 / 08 · CSS foundations · ~35 min</p>
+      <h1 tabindex="-1">Give your page a point of view.</h1><p class="lesson-intro">A few deliberate choices can give a simple page a strong personality. Learn how this portfolio uses a small color palette, two kinds of type, and plenty of space.</p>
+      <ul class="objectives"><li>Write CSS rules</li><li>Understand the box model</li><li>Use custom properties</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>A selector chooses. A declaration changes.</h2>
+ <p>In a CSS rule, the selector chooses the elements to style. Inside the braces, each declaration pairs a property with a value. A dot selects a class, a hash selects an ID, and an element name selects every matching element.</p><div class="code-block"><div class="code-top">styles.css · a rule</div><pre><code>.hero-intro {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}</code></pre></div>
+ <p>This selects elements with <code>class="hero-intro"</code>. <code>line-height</code> without a unit multiplies the text size: 1.65 gives each line room to breathe. CSS comments use <code>/* like this */</code>.</p>
+ <h2>Understand the space around a box</h2>
+ <p>Every element occupies a box. <strong>Content</strong> sits in the middle, <strong>padding</strong> is space inside the border, and <strong>margin</strong> is space outside it. A border sits between the padding and margin.</p><div class="code-block"><div class="code-top">CSS · a box you can experiment with</div><pre><code>* { box-sizing: border-box; }
+
+.note-card {
+  max-width: 420px;
+  padding: 24px;
+  border: 1px solid #637166;
+  margin: 32px auto;
+}</code></pre></div>
+ <p><code>border-box</code> includes padding and borders in the element’s declared width, which makes sizing more predictable. <code>max-width</code> sets an upper limit, and horizontal <code>auto</code> margins can center a block when there is spare space.</p>
+ <h2>Give your design a small vocabulary</h2>
+ <p>The top of this portfolio’s stylesheet defines <strong>custom properties</strong>. A name beginning with <code>--</code> stores a reusable value. <code>:root</code> makes these values available throughout the document; <code>var()</code> reads one.</p><div class="code-block"><div class="code-top">styles.css · existing color tokens</div><pre><code>:root {
+  --paper: #f2f0e8;
+  --ink: #26352e;
+  --muted: #637166;
+  --green: #294333;
+  --accent: #d5a643;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+}</code></pre></div>
+ <p>Changing one token can update many elements at once. Begin with one background, one text color, and one accent. The portfolio pairs a readable sans-serif font with Georgia for expressive italic headings. You do not need a downloaded font to make the page feel personal.</p>
+ <h2>When a style seems to be ignored</h2>
+ <p>CSS rules can compete. More specific selectors can win over broader ones. When importance and specificity match, the later declaration wins. In browser developer tools, inspect an element and look for crossed-out declarations to see which rule is winning.</p>
+ <div class="note"><strong>Try one change at a time.</strong> Start with spacing, then color, then typography. A small, visible change teaches you more than replacing the whole stylesheet.</div><section class="exercise" aria-labelledby="exercise-3"><p class="eyebrow">Make it yours · exercise 03</p>
+    <h2 id="exercise-3">Create your first design variation</h2><p>Try a warmer accent and give the “Now” section from lesson 2 some space. You can test colors in the workbench before editing the portfolio.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-3-0"><span>Find --accent in :root and change it to a color you like.</span></label></li><li><label><input type="checkbox" data-check="lesson-3-1"><span>Add padding to #now so the text has space above and below.</span></label></li><li><label><input type="checkbox" data-check="lesson-3-2"><span>Inspect the result and check that text is still easy to read.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><div class="code-block"><div class="code-top">styles.css · edit the existing token</div><pre><code>--accent: #d99b69;</code></pre></div><div class="code-block"><div class="code-top">styles.css · add a new rule</div><pre><code>#now {
+  padding-block: 64px;
+}
+
+#now p {
+  max-width: 42ch;
+  line-height: 1.8;
+}</code></pre></div><p><code>padding-block</code> adds space above and below in this writing direction. <code>ch</code> is based on the width of the font’s “0” character; it is a useful approximate measure for readable line lengths. These are sample values, not the only good answers.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="1" data-explanation="Padding is inside the border. Margin separates the box from neighboring boxes.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>Which property adds space inside an element’s border?</legend><label><input type="radio" name="quiz-3" value="0"><span>margin</span></label><label><input type="radio" name="quiz-3" value="1"><span>padding</span></label><label><input type="radio" name="quiz-3" value="2"><span>gap</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-3" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-4">Next lesson →</a></div><p class="completion-message" id="lesson-3-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 3 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=1PnVor36_40" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">CSS / essentials</span></div>
+      <div class="video-info"><small>Web Dev Simplified</small><strong>Learn CSS in 20 Minutes</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Watch for selectors, declarations, stylesheet linking, and the box model. Recreate one example yourself.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model" target="_blank" rel="noopener">MDN · The CSS box model ↗</a></aside></div></article><article class="page" id="lesson-4" data-lesson data-title="Design for every screen">
+      <header class="lesson-header"><p class="eyebrow">Lesson 04 / 08 · Responsive design · ~35 min</p>
+      <h1 tabindex="-1">Let the layout breathe.</h1><p class="lesson-intro">Your page needs to work in a narrow phone browser and on a wide desktop. Responsive design gives content rules for using the space it actually has.</p>
+      <ul class="objectives"><li>Choose Flexbox or Grid</li><li>Use flexible widths</li><li>Test narrow screens</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>Start with a flexible container</h2>
+ <p>A fixed width like <code>width: 1180px</code> can overflow a phone. This portfolio’s <code>.wrap</code> class combines a maximum size with space at the edges. <code>min()</code> uses whichever value is smaller.</p><div class="code-block"><div class="code-top">styles.css · desktop container</div><pre><code>.wrap {
+  width: min(1180px, calc(100% - 72px));
+  margin-inline: auto;
+}</code></pre></div>
+ <p>On a large screen, the content stops growing at 1180 pixels. Below that size, it uses the available width minus 72 pixels. The existing mobile rules make the side margins smaller on narrow screens.</p>
+ <h2>Use Flexbox for a row</h2>
+ <p>Flexbox is useful when arranging items mainly along one axis. The portfolio header puts a wordmark at one end and navigation at the other. <code>gap</code> adds space between items without adding it around the whole container.</p><div class="code-block"><div class="code-top">CSS · simplified header</div><pre><code>.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}</code></pre></div>
+ <h2>Use Grid for project columns</h2>
+ <p>Grid describes rows and columns. In this rule, <code>repeat(2, ...)</code> creates two equal columns. <code>1fr</code> means one share of the available space. <code>minmax(0, 1fr)</code> lets a column shrink instead of being forced wider by its contents.</p><div class="code-block"><div class="code-top">styles.css · project grid</div><pre><code>.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 24px;
+}
+
+@media (max-width: 760px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}</code></pre></div>
+ <p>A <strong>media query</strong> applies rules when a condition is true. Here, at viewport widths of 760 pixels or less, the projects stack into one column. This is already implemented in the portfolio. Lesson 6 will give you real cards to test.</p>
+ <h2>Let images fit their space</h2>
+ <p><code>width: 100%</code> keeps an image within its container. For a cropped project cover, <code>object-fit: cover</code> fills the frame while preserving the image’s proportions. Some edges may be cropped, so check the subject is still visible.</p>
+ <p>Test by narrowing the browser and by using the device toolbar in developer tools. Look for sideways scrolling, squeezed navigation, unreadably small text, and controls that are hard to tap. Also test at 200% zoom.</p><section class="exercise" aria-labelledby="exercise-4"><p class="eyebrow">Make it yours · exercise 04</p>
+    <h2 id="exercise-4">Turn a card into a responsive layout</h2><p>Open the workbench. Duplicate its article so there are two project cards, then arrange them in a grid that stacks on small screens.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-4-0"><span>Place two article elements inside a div with class=&quot;project-list&quot;.</span></label></li><li><label><input type="checkbox" data-check="lesson-4-1"><span>Set two equal columns with a gap, then switch to one below 600px.</span></label></li><li><label><input type="checkbox" data-check="lesson-4-2"><span>Run the preview and narrow the browser to check the result.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><div class="code-block"><div class="code-top">Workbench · wrap your cards</div><pre><code>&lt;div class=&quot;project-list&quot;&gt;
+  &lt;article class=&quot;card&quot;&gt;First project&lt;/article&gt;
+  &lt;article class=&quot;card&quot;&gt;Second project&lt;/article&gt;
+&lt;/div&gt;</code></pre></div><div class="code-block"><div class="code-top">Workbench · add to the CSS</div><pre><code>.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .project-list { grid-template-columns: 1fr; }
+}</code></pre></div><p>The media query in the workbench uses the preview frame’s width. Expand your browser for two columns and narrow it for one. Keep the original card content inside each article.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="0" data-explanation="It creates two equal shares of the grid’s available width. A later media query can change the columns.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>What does grid-template-columns: repeat(2, 1fr) create?</legend><label><input type="radio" name="quiz-4" value="0"><span>Two equally sized columns</span></label><label><input type="radio" name="quiz-4" value="1"><span>Two fixed 1-pixel columns</span></label><label><input type="radio" name="quiz-4" value="2"><span>Two columns on every device, regardless of later rules</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-4" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-5">Next lesson →</a></div><p class="completion-message" id="lesson-4-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 4 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=8QSqwbSztnA" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">CSS / grid</span></div>
+      <div class="video-info"><small>Kevin Powell</small><strong>Get started with grid WITHOUT being overwhelmed</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Focus on grid containers, columns, repeat(), and fractional units. Then build the two-card exercise.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank" rel="noopener">MDN · Responsive web design ↗</a></aside></div></article><article class="page" id="lesson-5" data-lesson data-title="Bring the page to life">
+      <header class="lesson-header"><p class="eyebrow">Lesson 05 / 08 · JavaScript &amp; the DOM · ~35 min</p>
+      <h1 tabindex="-1">Make the browser do something.</h1><p class="lesson-intro">JavaScript can read the page, change its content, and react to an action. Start with one element and one small interaction.</p>
+      <ul class="objectives"><li>Select a DOM element</li><li>Change textContent</li><li>Handle a click event</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>The browser turns HTML into a tree</h2>
+ <p>The <strong>Document Object Model</strong>, or DOM, is the browser’s representation of your page. JavaScript can select elements from this tree. A CSS selector works here too: <code>.class-name</code>, <code>#an-id</code>, or <code>[data-intro]</code>.</p><div class="code-block"><div class="code-top">JavaScript · select and update</div><pre><code>const introduction = document.querySelector(&#x27;[data-intro]&#x27;);
+introduction.textContent = &#x27;A little collection of things I make.&#x27;;</code></pre></div>
+ <p><code>const</code> gives a name to a value. <code>document.querySelector()</code> returns the first matching element, or <code>null</code> if none exists. <code>textContent</code> changes its text without interpreting it as HTML.</p>
+ <div class="note"><strong>Timing matters.</strong> The portfolio loads <code>script.js</code> with <code>defer</code>, so the HTML is parsed before the script runs. Later, its JSON request may update the introduction again. For a permanent introduction change, edit <code>site.json</code>.</div>
+ <h2>Read the portfolio’s helper function</h2>
+ <p>A function packages steps you want to reuse. This existing helper takes a selector and a value, skips empty values, and updates every matching element. <code>querySelectorAll()</code> gives a collection; <code>forEach()</code> runs a function for each item.</p><div class="code-block"><div class="code-top">script.js · existing helper</div><pre><code>const setText = (selector, value) =&gt; {
+  if (!value) return;
+  document.querySelectorAll(selector).forEach((node) =&gt; {
+    node.textContent = value;
+  });
+};
+
+// Example call:
+setText(&#x27;[data-name-full]&#x27;, &#x27;Isaure Leclercq&#x27;);</code></pre></div>
+ <p>The arrow <code>=&gt;</code> introduces a function. Its inputs are called parameters. A function definition does not run its body until something calls it. The footer has multiple name elements, so updating all matches keeps them consistent.</p>
+ <h2>Respond to an event</h2>
+ <p>A click is an <strong>event</strong>. <code>addEventListener()</code> registers a function to run when it happens. Use a real <code>button</code> for an action so keyboard users can activate it too.</p><div class="code-block"><div class="code-top">HTML · add inside your Now section</div><pre><code>&lt;button type=&quot;button&quot; id=&quot;idea-button&quot;&gt;Give me a project idea&lt;/button&gt;
+&lt;p id=&quot;idea-output&quot; aria-live=&quot;polite&quot;&gt;Your next idea could start here.&lt;/p&gt;</code></pre></div><div class="code-block"><div class="code-top">JavaScript · append to script.js</div><pre><code>const ideaButton = document.querySelector(&#x27;#idea-button&#x27;);
+const ideaOutput = document.querySelector(&#x27;#idea-output&#x27;);
+
+if (ideaButton &amp;&amp; ideaOutput) {
+  ideaButton.addEventListener(&#x27;click&#x27;, () =&gt; {
+    ideaOutput.textContent = &#x27;Design a poster for your favorite place.&#x27;;
+  });
+}</code></pre></div>
+ <p>The <code>if</code> checks that both elements exist. This prevents an error if the HTML is missing. <code>aria-live="polite"</code> helps assistive technology announce the changed message.</p>
+ <p>Open the browser’s developer tools and choose <strong>Console</strong> when something fails. An error such as “Cannot read properties of null” often means a selector did not find the element you expected.</p><section class="exercise" aria-labelledby="exercise-5"><p class="eyebrow">Make it yours · exercise 05</p>
+    <h2 id="exercise-5">Build an idea button</h2><p>Add the button and output paragraph to your Now section, then add the click handler to script.js. This JavaScript exercise runs in the portfolio, not the HTML/CSS workbench.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-5-0"><span>Add both HTML elements with the matching IDs.</span></label></li><li><label><input type="checkbox" data-check="lesson-5-1"><span>Append the event listener and choose your own project prompt.</span></label></li><li><label><input type="checkbox" data-check="lesson-5-2"><span>Save, refresh, and test the button with both a mouse and Enter.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><p>The two examples above form a complete solution. The ID strings must match exactly, including hyphens. Put the JavaScript after the existing code rather than replacing the JSON-loading functions.</p><p>Optional stretch: add a second button with a different idea. Use a distinct ID and attach its own event listener to update the same output paragraph.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="2" data-explanation="addEventListener() connects an event such as click to a function that handles it.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>Which method runs a function when someone clicks a button?</legend><label><input type="radio" name="quiz-5" value="0"><span>querySelector()</span></label><label><input type="radio" name="quiz-5" value="1"><span>textContent</span></label><label><input type="radio" name="quiz-5" value="2"><span>addEventListener()</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-5" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-6">Next lesson →</a></div><p class="completion-message" id="lesson-5-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 5 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=0ik6X4DJKCc" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">JavaScript / DOM</span></div>
+      <div class="video-info"><small>Traversy Media</small><strong>JavaScript DOM Crash Course - Part 1</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Use this as a reference for finding elements and changing their text or styles. The lesson adds a small click-handler exercise.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" rel="noopener">MDN · Introduction to the DOM ↗</a></aside></div></article><article class="page" id="lesson-6" data-lesson data-title="Turn data into projects">
+      <header class="lesson-header"><p class="eyebrow">Lesson 06 / 08 · JSON &amp; fetch · ~40 min</p>
+      <h1 tabindex="-1">One card. Many possibilities.</h1><p class="lesson-intro">The project layout stays the same while your work grows. Put the content in JSON, load it with JavaScript, and let one card-building function do the repetition.</p>
+      <ul class="objectives"><li>Write valid JSON</li><li>Follow a fetch request</li><li>Add real project cards</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>Separate content from layout</h2>
+ <p><strong>JSON</strong> is a text format for structured data. An object uses braces and named properties. An array uses brackets and contains a list of values. The portfolio’s <code>projects.json</code> is an array of project objects.</p><div class="code-block"><div class="code-top">projects.json · one sample project</div><pre><code>[
+  {
+    &quot;title&quot;: &quot;Garden notes&quot;,
+    &quot;category&quot;: &quot;Visual identity&quot;,
+    &quot;year&quot;: &quot;2026&quot;,
+    &quot;description&quot;: &quot;A small identity inspired by neighborhood gardens.&quot;,
+    &quot;color&quot;: &quot;#e4e6da&quot;,
+    &quot;mark&quot;: &quot;G&quot;
+  }
+]</code></pre></div>
+ <p>This is fictional sample content to replace with your own work. JSON requires double quotes around property names and text. Separate entries with commas, but do not put a comma after the last entry. Comments are not allowed.</p>
+ <p>In this portfolio, only <code>title</code> is required. Optional fields include <code>cover</code>, <code>coverAlt</code>, <code>url</code>, and a <code>links</code> array. Without a cover image, the script draws a typographic placeholder using <code>color</code> and <code>mark</code>.</p>
+ <h2>Load the file in the browser</h2>
+ <p><code>fetch()</code> starts a request and returns a promise for its response. In an <code>async</code> function, <code>await</code> pauses that function until the awaited promise settles. The rest of the page can remain responsive.</p><div class="code-block"><div class="code-top">JavaScript · simplified version of loadProjects</div><pre><code>const loadProjects = async () =&gt; {
+  try {
+    const response = await fetch(&#x27;projects.json&#x27;);
+    if (!response.ok) throw new Error(&#x27;Could not load projects&#x27;);
+
+    const projects = await response.json();
+    renderProjects(Array.isArray(projects) ? projects : []);
+  } catch (error) {
+    console.info(&#x27;Project list is not available yet.&#x27;, error);
+    renderProjects([]);
+  }
+};
+
+loadProjects();</code></pre></div>
+ <p>Check <code>response.ok</code> because a response with an HTTP error such as 404 does not by itself reject the fetch promise. <code>response.json()</code> parses the response text into JavaScript data. The <code>catch</code> block handles request or parsing errors and shows an empty list.</p>
+ <h2>Follow the data into the DOM</h2>
+ <div class="flow" aria-label="projects.json is fetched, parsed, converted into cards, and inserted into the page"><span>projects.json</span><b>→</b><span>fetch + parse</span><b>→</b><span>makeProjectCard</span><b>→</b><span>page</span></div>
+ <p>The existing <code>makeProjectCard(project, index)</code> builds an article, cover, heading, description, and links. It returns a DOM element. <code>projects.map(makeProjectCard)</code> creates one card per project; <code>replaceChildren()</code> inserts them into the grid.</p>
+ <p>You do not need to rewrite that function to add work. Add another object to the JSON array. The project count and empty-state message update automatically. If you add a cover, put its image file in <code>assets/</code>, and match the path and capitalization exactly.</p><section class="exercise" aria-labelledby="exercise-6"><p class="eyebrow">Make it yours · exercise 06</p>
+    <h2 id="exercise-6">Add two projects to the portfolio</h2><p>Replace the empty array in projects.json with two project objects. Use typographic covers first so you can focus on the data.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-6-0"><span>Add two objects, each with a title and description, separated by a comma.</span></label></li><li><label><input type="checkbox" data-check="lesson-6-1"><span>Give each a different mark and background color.</span></label></li><li><label><input type="checkbox" data-check="lesson-6-2"><span>Refresh and confirm two cards appear, the count reads 02, and the empty message disappears.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><div class="code-block"><div class="code-top">projects.json · complete sample file</div><pre><code>[
+  {
+    &quot;title&quot;: &quot;Garden notes&quot;,
+    &quot;description&quot;: &quot;An identity inspired by local gardens.&quot;,
+    &quot;category&quot;: &quot;Visual identity&quot;,
+    &quot;year&quot;: &quot;2026&quot;,
+    &quot;color&quot;: &quot;#e4e6da&quot;,
+    &quot;mark&quot;: &quot;G&quot;
+  },
+  {
+    &quot;title&quot;: &quot;Sunday studies&quot;,
+    &quot;description&quot;: &quot;A series of small typography experiments.&quot;,
+    &quot;category&quot;: &quot;Typography&quot;,
+    &quot;year&quot;: &quot;2026&quot;,
+    &quot;color&quot;: &quot;#d5a643&quot;,
+    &quot;mark&quot;: &quot;S&quot;
+  }
+]</code></pre></div><p>Optional stretch: add <code>"cover": "assets/garden.jpg"</code> and a useful <code>coverAlt</code> to the first object after saving an image with that exact filename. If you see no cards, check the Console for a JSON error and the Network panel for the file request.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="1" data-explanation="HTTP error responses still produce a Response object. response.ok tells you whether its status is in the successful range.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>Why check response.ok after fetch()?</legend><label><input type="radio" name="quiz-6" value="0"><span>Because JSON can only contain one project</span></label><label><input type="radio" name="quiz-6" value="1"><span>Because fetch() can resolve even when the server returns 404</span></label><label><input type="radio" name="quiz-6" value="2"><span>Because it automatically repairs invalid JSON</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-6" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-7">Next lesson →</a></div><p class="completion-message" id="lesson-6-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 6 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=Oive66jrwBs" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">JavaScript / data</span></div>
+      <div class="video-info"><small>Traversy Media</small><strong>Fetch API Introduction</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Watch the local text and JSON examples. The video uses promise chains; this lesson shows the same flow with async/await.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="noopener">MDN · Using the Fetch API ↗</a></aside></div></article><article class="page" id="lesson-7" data-lesson data-title="Make it work for people">
+      <header class="lesson-header"><p class="eyebrow">Lesson 07 / 08 · Accessibility &amp; testing · ~30 min</p>
+      <h1 tabindex="-1">Good design includes people.</h1><p class="lesson-intro">A portfolio should be comfortable to read and easy to use. Test the experience with different inputs, screen sizes, and ways of reading the page.</p>
+      <ul class="objectives"><li>Test with a keyboard</li><li>Write useful alt text</li><li>Find and fix common errors</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>Start with the keyboard</h2>
+ <p>Some visitors use a keyboard, a switch, or assistive technology instead of a mouse. Press <kbd>Tab</kbd> to move forward through interactive elements, <kbd>Shift</kbd> + <kbd>Tab</kbd> to move back, and <kbd>Enter</kbd> to follow a link or activate a focused button. Buttons also respond to the space bar.</p>
+ <p>The current portfolio includes a “Skip to content” link. It becomes visible when focused and takes you past repeated navigation. Keep it. Use links for navigation and buttons for actions, and do not remove focus outlines without replacing them.</p><div class="code-block"><div class="code-top">styles.css · visible keyboard focus</div><pre><code>a:focus-visible,
+button:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}</code></pre></div>
+ <h2>Describe what an image contributes</h2>
+ <p>A project cover might need the description “Cream packaging with green botanical line drawings.” Writing “image” or repeating the filename tells the reader little. If an image is purely decorative, use an empty <code>alt=""</code> so it can be skipped.</p>
+ <p>The portfolio uses <code>coverAlt</code> from each project object as the cover image’s alternative text. Supply a useful description when the image communicates something about your work.</p>
+ <h2>Check readability, not just aesthetics</h2>
+ <p>Normal text should have at least a 4.5:1 contrast ratio against its background; large text has a 3:1 minimum under WCAG AA. Use the contrast information in browser developer tools or a contrast checker. A pretty palette does not guarantee readable text.</p>
+ <p>Also inspect at 200% zoom, use a narrow viewport, and check that long project titles wrap. Do not use color as the only way to communicate a status. A label such as “Complete” helps everyone understand the meaning.</p>
+ <h2>Use the browser as a debugging tool</h2>
+ <div class="table-wrap"><table><thead><tr><th>What you see</th><th>What to check</th></tr></thead><tbody>
+ <tr><td>The old introduction</td><td>Save <code>site.json</code>, refresh, and check for a JSON parsing error in Console.</td></tr>
+ <tr><td>No project cards</td><td>Check that <code>projects.json</code> is a valid array. The empty-state fallback also appears after loading errors.</td></tr>
+ <tr><td>A broken image</td><td>Check its exact path and filename. Look for a 404 response in Network.</td></tr>
+ <tr><td>A missing style</td><td>Inspect the element and check for a competing rule or a misspelled class.</td></tr>
+ <tr><td>Sideways scrolling</td><td>Look for fixed widths or long content that cannot wrap.</td></tr>
+ </tbody></table></div>
+ <p>Testing is an ongoing habit. Automated tools can help, but a manual keyboard pass and a careful read catch issues a score can miss.</p><section class="exercise" aria-labelledby="exercise-7"><p class="eyebrow">Make it yours · exercise 07</p>
+    <h2 id="exercise-7">Run a small accessibility review</h2><p>Review the portfolio after adding your project cards. Write down one issue, fix it, and repeat the same check.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-7-0"><span>Navigate all links and buttons using only the keyboard; verify focus is visible.</span></label></li><li><label><input type="checkbox" data-check="lesson-7-1"><span>Review heading order and the alternative text for every project cover.</span></label></li><li><label><input type="checkbox" data-check="lesson-7-2"><span>Test at a narrow width and 200% zoom, and check your text contrast.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><p>A successful review means you can reach and activate each control, see where focus is, read all text without it being clipped, and understand images from their descriptions. The exact fixes depend on your content.</p><p>For example, add the focus rule above, shorten a vague “click here” link to a descriptive destination, and replace a filename-like <code>coverAlt</code> with a description of the design.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="0" data-explanation="A visible focus indicator shows where keyboard interaction is currently directed.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>What is the best reason to keep a visible focus indicator?</legend><label><input type="radio" name="quiz-7" value="0"><span>It shows keyboard users which control will respond</span></label><label><input type="radio" name="quiz-7" value="1"><span>It makes every image load faster</span></label><label><input type="radio" name="quiz-7" value="2"><span>It replaces the need for headings</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-7" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#lesson-8">Next lesson →</a></div><p class="completion-message" id="lesson-7-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 7 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=cOmehxAU_4s" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">Design / accessibility</span></div>
+      <div class="video-info"><small>Chrome for Developers · Rob Dodson</small><strong>How I do an accessibility check -- A11ycasts #11</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Follow the keyboard and screen-reader testing process. Apply one check to your portfolio before continuing.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" target="_blank" rel="noopener">W3C · Understanding minimum contrast ↗</a></aside></div></article><article class="page" id="lesson-8" data-lesson data-title="Share it with the world">
+      <header class="lesson-header"><p class="eyebrow">Lesson 08 / 08 · Git &amp; GitHub Pages · ~30 min</p>
+      <h1 tabindex="-1">From your laptop to a link.</h1><p class="lesson-intro">You now have the pieces of a personal portfolio. Learn how Git records a version, GitHub stores it, and GitHub Pages makes it available on the web.</p>
+      <ul class="objectives"><li>Understand add, commit, push</li><li>Configure branch publishing</li><li>Verify the live site</li></ul></header>
+      <div class="lesson-layout"><div class="lesson-copy"><h2>Understand the three places your code lives</h2>
+ <p>Your <strong>working folder</strong> contains your current edits. Your local <strong>Git repository</strong> records saved versions called commits. The <strong>remote repository</strong> on GitHub receives commits when you push. Editing a local file alone does not update the published website.</p>
+ <p>This workspace already has the portfolio repository connected as <code>origin</code>, and its local <code>main</code> branch tracks <code>origin/main</code>. Before publishing, inspect what has changed:</p><div class="code-block"><div class="code-top">Terminal · inspect your changes</div><pre><code>git status
+git diff</code></pre></div>
+ <p><code>git status</code> lists changed and new files. <code>git diff</code> shows changes in tracked files; newly created files need to be opened separately for review. Confirm you are in the intended repository and branch.</p>
+ <h2>Save a version and send it to GitHub</h2>
+ <p>For a practice project, work in your own copy or fork. Only push to this portfolio if you are authorized to update it. When you are ready to publish your reviewed changes:</p><div class="code-block"><div class="code-top">Terminal · publish reviewed portfolio changes</div><pre><code>git add index.html styles.css script.js site.json projects.json assets/
+git diff --staged
+git commit -m &quot;Personalize portfolio and add projects&quot;
+git push origin main</code></pre></div>
+ <p><code>add</code> stages the chosen files, <code>commit</code> saves a local version, and <code>push</code> sends commits to GitHub. The example stages the portfolio files. Add any other new files you intend to publish explicitly. If GitHub asks you to authenticate, use your normal GitHub sign-in or configured Git credential flow.</p>
+ <div class="note"><strong>Pause before the push.</strong> If Pages is already configured, pushing to its publishing branch updates the live site. Review staged files for unintended changes or private information first. If Git reports a conflict or rejects a push, resolve it before continuing; do not force-push as a shortcut.</div>
+ <h2>Enable GitHub Pages</h2>
+ <p>With repository admin or maintainer access, open the repository on GitHub and follow these steps. The labels below follow GitHub’s current documentation; older videos may show a different interface.</p>
+ <ol><li>Open <strong>Settings → Pages</strong>.</li><li>Under <strong>Build and deployment</strong>, choose <strong>Deploy from a branch</strong> as the source.</li><li>Select <strong>main</strong> and <strong>/(root)</strong>, then save.</li><li>Wait for the Pages deployment to finish. Check the repository’s Actions area or Pages settings if it fails.</li></ol>
+ <p>For this repository, the published address is <a href="https://isaureleclercq.github.io/" target="_blank" rel="noopener">isaureleclercq.github.io</a>. In your own account, a repository named <code>YOUR-USERNAME.github.io</code> uses that account’s root Pages address. An ordinary project repository typically lives under <code>/REPOSITORY-NAME/</code>, so relative file paths are useful.</p>
+ <h2>Do a final live check</h2>
+ <p>Open the published URL in a new tab. Confirm the latest introduction, project cards, images, navigation, and mobile layout. Try project links and check that shared documents are accessible to their intended readers. A working local preview does not prove that the public deployment succeeded.</p>
+ <p><strong>Your final project:</strong> personalize the introduction and About text, add three projects of your own, choose a coherent palette, pass a keyboard and mobile check, and publish when ready. Keep a short note explaining what you built and one thing you want to improve next.</p><section class="exercise" aria-labelledby="exercise-8"><p class="eyebrow">Make it yours · exercise 08</p>
+    <h2 id="exercise-8">Prepare a portfolio you can share</h2><p>Complete a release checklist. Publishing is optional while you are practicing; the review and local checks are still useful.</p>
+    <ul class="checklist"><li><label><input type="checkbox" data-check="lesson-8-0"><span>Review your changed files and confirm the introduction and three projects are yours.</span></label></li><li><label><input type="checkbox" data-check="lesson-8-1"><span>Check links, images, keyboard access, narrow screens, and JSON loading.</span></label></li><li><label><input type="checkbox" data-check="lesson-8-2"><span>When authorized and ready, push and verify the published URL—or record that you are keeping this practice copy local.</span></label></li></ul>
+    <details><summary>Need a hand? See a solution</summary><p>A complete submission is a working portfolio with your own content, a clear project structure, and a short explanation of what changed. If you publish, keep its URL and verify it in a fresh browser tab. If you stay local, record the preview URL and the server command instead.</p><p>GitHub deployment errors belong in the repository’s Actions logs. Missing live assets often come from a wrong filename, letter case, or path. Check those before changing the design.</p></details></section>
+      <form class="quiz js-only" data-quiz data-answer="2" data-explanation="git push transfers local commits to the remote. Staging and committing happen locally.">
+      <p class="eyebrow">A quick check</p><fieldset><legend>What sends your local commits to the remote repository?</legend><label><input type="radio" name="quiz-8" value="0"><span>git add</span></label><label><input type="radio" name="quiz-8" value="1"><span>git commit</span></label><label><input type="radio" name="quiz-8" value="2"><span>git push</span></label></fieldset>
+      <button class="button small secondary" type="submit">Check my answer</button><p class="quiz-feedback" data-feedback aria-live="polite"></p></form>
+      <div class="lesson-end"><button class="button completion-button js-only" type="button" data-complete="lesson-8" aria-pressed="false">Mark lesson complete</button>
+      <a class="next-link" href="#overview">Back to your course →</a></div><p class="completion-message" id="lesson-8-message" aria-live="polite"></p>
+      </div><aside class="lesson-resource" aria-label="Lesson 8 references"><h2>Watch & explore</h2>
+      <a class="video-card" href="https://www.youtube.com/watch?v=p1QU3kLFPdg" target="_blank" rel="noopener">
+      <div class="video-graphic" aria-hidden="true"><span class="play-icon">▶</span><span class="video-topic">Publishing / GitHub Pages</span></div>
+      <div class="video-info"><small>SuperSimpleDev</small><strong>How to put an HTML website online (on the Internet)</strong><span>Watch on YouTube ↗</span></div></a>
+      <p class="watch-note">Follow the GitHub Pages portion. A custom domain is optional; use the current GitHub instructions linked below for the settings.</p><p class="watch-note">Optional companion video. Lesson time estimates cover reading and exercises, not video time.</p>
+      <a class="reading-link" href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" target="_blank" rel="noopener">GitHub Docs · Configure a publishing source ↗</a></aside></div></article>
+<section class="page" id="workbench" data-title="Code workbench"><header class="lesson-header"><p class="eyebrow">A small space to experiment</p><h1 tabindex="-1">What happens if…?</h1><p class="workbench-intro">Change the HTML or CSS, then run your preview. Try a new heading, a different color, or a second card. These experiments stay here; they don’t change the portfolio files.</p></header>
+<div class="editor-grid"><div class="editor-panel"><label class="editor-label" for="html-editor">HTML <span>The content</span></label><textarea id="html-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="workbench-help">&lt;main&gt;
+  &lt;p class=&quot;eyebrow&quot;&gt;A little collection of ideas&lt;/p&gt;
+  &lt;h1&gt;Hello, I’m &lt;em&gt;Isaure.&lt;/em&gt;&lt;/h1&gt;
+  &lt;p&gt;I turn curiosity into things you can see.&lt;/p&gt;
+  &lt;article class=&quot;card&quot;&gt;
+    &lt;span class=&quot;mark&quot; aria-hidden=&quot;true&quot;&gt;G&lt;/span&gt;
+    &lt;h2&gt;Garden notes&lt;/h2&gt;
+    &lt;p&gt;An identity inspired by local gardens.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/main&gt;</textarea></div>
+<div class="editor-panel"><label class="editor-label" for="css-editor">CSS <span>The appearance</span></label><textarea id="css-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="workbench-help">* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 32px;
+  background: #f2f0e8;
+  color: #26352e;
+  font-family: system-ui, sans-serif;
+}
+main { max-width: 680px; margin: auto; }
+h1 { font-size: clamp(32px, 6vw, 50px); line-height: 1.1; }
+h1 em { font-family: Georgia, serif; color: #647751; }
+p { line-height: 1.7; }
+.eyebrow { font-size: 11px; text-transform: uppercase; }
+.card { padding: 24px; background: #e4e6da; border-radius: 8px; }
+.card h2 { margin-bottom: 8px; }
+.mark { font: italic 48px Georgia, serif; }</textarea></div></div>
+<div class="workbench-controls"><button type="button" class="button js-only" data-run>Run preview <span aria-hidden="true">↗</span></button><button type="button" class="button secondary js-only" data-reset-code>Restore example</button><p class="workbench-status" data-preview-status aria-live="polite">Ready when you are.</p></div>
+<div class="preview-shell"><div class="preview-label">YOUR LIVE PREVIEW</div><iframe id="workbench-preview" title="Your HTML and CSS experiment" sandbox="" referrerpolicy="no-referrer"></iframe></div>
+<p class="workbench-challenge" id="workbench-help"><strong>Try this:</strong> change the name, give the card a new background, then add another card. The preview supports HTML and CSS; JavaScript and external resources are disabled. Code is saved in this browser when storage is available. Copy it to a local file to keep your own version.</p>
+<a class="next-link" href="#lesson-4">Go to the responsive-layout exercise →</a></section>
+<footer class="course-footer"><span data-overall-message>Build something small. Make it yours. Keep going.</span><a href="https://github.com/isaureleclercq/isaureleclercq.github.io" target="_blank" rel="noopener">Explore the source ↗</a></footer>
+</main></div></body></html>
