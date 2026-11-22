@@ -6,16 +6,26 @@ const setText = (selector, value) => {
   document.querySelectorAll(selector).forEach((node) => { node.textContent = value; });
 };
 
+const configureProjectLink = (link, url) => {
+  link.href = url;
+  const isExternal = new URL(url, document.baseURI).origin !== window.location.origin;
+  if (isExternal) {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  }
+  return isExternal;
+};
+
 const makeProjectCard = (project, index) => {
   const article = document.createElement('article');
   article.className = 'project-card';
+  if (project.featured) article.classList.add('project-card--featured');
 
   const cover = document.createElement(project.url ? 'a' : 'div');
   cover.className = 'project-cover';
+  if (project.coverFit === 'contain') cover.classList.add('project-cover--contain');
   if (project.url) {
-    cover.href = project.url;
-    cover.target = '_blank';
-    cover.rel = 'noreferrer';
+    configureProjectLink(cover, project.url);
     cover.setAttribute('aria-label', `Open ${project.title}`);
   }
 
@@ -24,6 +34,11 @@ const makeProjectCard = (project, index) => {
     image.src = project.cover;
     image.alt = project.coverAlt || `${project.title} project image`;
     image.loading = 'lazy';
+    image.decoding = 'async';
+    if (project.coverWidth && project.coverHeight) {
+      image.width = project.coverWidth;
+      image.height = project.coverHeight;
+    }
     cover.append(image);
   } else {
     const placeholder = document.createElement('span');
@@ -50,7 +65,14 @@ const makeProjectCard = (project, index) => {
   const details = document.createElement('div');
   const title = document.createElement('h3');
   title.className = 'project-title';
-  title.textContent = project.title;
+  if (project.url) {
+    const titleLink = document.createElement('a');
+    configureProjectLink(titleLink, project.url);
+    titleLink.textContent = project.title;
+    title.append(titleLink);
+  } else {
+    title.textContent = project.title;
+  }
   details.append(title);
   if (project.description) {
     const description = document.createElement('p');
@@ -64,10 +86,8 @@ const makeProjectCard = (project, index) => {
     project.links.forEach((item) => {
       if (!item.label || !item.url) return;
       const link = document.createElement('a');
-      link.href = item.url;
-      link.target = '_blank';
-      link.rel = 'noreferrer';
-      link.textContent = `${item.label} ↗`;
+      const isExternal = configureProjectLink(link, item.url);
+      link.textContent = `${item.label} ${isExternal ? '↗' : '→'}`;
       links.append(link);
     });
     details.append(links);

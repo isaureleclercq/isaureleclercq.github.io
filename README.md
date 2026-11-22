@@ -29,9 +29,23 @@ Add an object to the array in `projects.json`:
 ]
 ```
 
-Only `title` is required. `cover` is optional; when omitted, a simple typographic cover is generated using `color` and `mark`. `url` makes the cover clickable. `links` can hold a live demo, case study, or a Google Drive share link. Check Drive sharing settings before adding a link you want visitors to open.
+Only `title` is required. `cover` is optional; when omitted, a simple typographic cover is generated using `color` and `mark`. `url` makes the cover and title clickable. Local project links stay in the same tab; external links open in a new tab. Set `featured` to `true` for a full-width project card. `links` can hold a live demo, case study, or a Google Drive share link. Check Drive sharing settings before adding a link you want visitors to open.
 
 For Adobe work, export a web-ready cover image into `assets/` and reference it with `cover`. Keep the editable source in your Adobe app or Drive; avoid uploading large working files to the website.
+
+For drawings that should stay uncropped, set `coverFit` to `"contain"`. Optional `coverWidth` and `coverHeight` values describe the cover image dimensions.
+
+## Hand drawn artwork
+
+Four artwork entries in `projects.json` link to `projects/hand-drawn-art.html`: the Opéra Garnier in Paris, a two-page school comic, a June sketchbook spread, and cat studies. The gallery includes all five scanned pages, with upright WebP images, click-to-enlarge views, and links to the four original PDFs. On phones the comic pages stack in reading order. Image and PDF links also work without JavaScript; the enlarged view supports Escape, a Close button, and a full-size image link.
+
+The web images and original scans live in `assets/drawings/`. The PDFs were supplied in `~/Documents/isaure/portfolio`; their original filenames are mapped in `assets/README.md`. Artwork titles are descriptive labels. No dates are inferred from scan filenames.
+
+## House renovation showcase
+
+The house model is featured in `projects.json`, with a dedicated page at `projects/house-renovation.html`. It uses a cover captured from the shared model and loads Autodesk’s interactive viewer when the visitor chooses **Explore in 3D**. On phones, an **Open 3D model** link opens the full Autodesk viewer instead of squeezing its controls into the page. A direct Autodesk link also remains available on desktop if the embedded viewer is unavailable. The page needs no API key or build step; the model must remain shared through Autodesk.
+
+Update the share link and iframe `data-src` in the project page if the Autodesk share changes, and recapture `assets/house-renovation.jpg` when you want a newer cover. Preview locally at `http://localhost:8000/projects/house-renovation.html`.
 
 ## Preview on your computer
 
