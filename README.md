@@ -19,6 +19,8 @@ Change one property in `site.json`, save, and refresh your local preview:
 
 The theme is applied on every page by `theme.js`. It resolves `site.json` relative to the script, so nested pages and GitHub Pages subdirectories use the same configuration. Missing, invalid, or unrecognized theme settings fall back to Parisian Gallery. No dependencies or build step are required.
 
+This portfolio sets `"featuredProject": "house-renovation"` to keep House renovation first in every theme. Remove that property to use the theme defaults in the table above.
+
 Optional homepage overrides in `site.json`:
 
 - `featuredProject`: the `id` of a project in `projects.json`, such as `"opera-garnier"` or `"house-renovation"`. Omit it to use the theme’s default.

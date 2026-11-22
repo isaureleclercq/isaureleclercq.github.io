@@ -45,8 +45,8 @@
     resume.href = `#${state.lastLesson}`;
     resume.querySelector('span').textContent = count === 8 ? 'Revisit the lessons' : (state.lastLesson !== lessonIds[0] || count > 0 ? 'Continue learning' : 'Start the first lesson');
     document.querySelector('[data-overall-message]').textContent = count === lessonIds.length
-      ? 'All eight lessons complete. Your next chapter: make the portfolio your own.'
-      : 'Build something small. Make it yours. Keep going.';
+      ? 'All eight lessons complete. Continue editing your portfolio or revisit a lesson.'
+      : 'Eight lessons, with exercises and a code workbench.';
   };
 
   const menu = document.querySelector('[data-menu]');

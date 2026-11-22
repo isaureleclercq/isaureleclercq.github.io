@@ -3,12 +3,12 @@
   "name": "Isaure Leclercq",
   "shortName": "Isaure",
   "firstName": "Isaure",
-  "eyebrow": "Drawing · Stories · Spaces",
-  "intro": "A collection of things made with curiosity.",
-  "aboutTitle": "Making room for",
-  "aboutTitleEmphasis": "what’s next.",
+  "eyebrow": "Drawing · Comics · 3D modeling",
+  "intro": "Drawings, comics, sketches, and a house renovation model.",
+  "aboutTitle": "About",
+  "aboutTitleEmphasis": "me.",
   "aboutParagraphs": [
-    "This is my corner of the internet for sharing what I make, what I’m learning, and what I’m curious about.",
-    "From a pencil line to a three-dimensional space, each project is another way to look a little closer."
-  ]
+    "This portfolio brings together my drawings, comics, sketchbook pages, and 3D modeling projects."
+  ],
+  "featuredProject": "house-renovation"
 }

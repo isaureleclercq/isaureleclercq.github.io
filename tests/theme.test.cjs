@@ -114,7 +114,7 @@ test('homepage overrides select artwork, full-size cover, and custom copy', asyn
 test('missing feature IDs fall back to a marked project, then the first project', async () => {
   const config = { featuredProject: 'gone' };
   const first = await load({ config });
-  assert.equal(titleOf(first.nodes['[data-featured-project]'].children[0]), 'Opéra Garnier, Paris');
+  assert.equal(titleOf(first.nodes['[data-featured-project]'].children[0]), 'House renovation');
   const second = await load({ config, projects: [{ title: 'Only project' }] });
   assert.equal(titleOf(second.nodes['[data-featured-project]'].children[0]), 'Only project');
 });
@@ -136,12 +136,20 @@ test('links retain same-tab navigation locally and safe new tabs externally', as
   assert.equal(links[1].target, '_blank');
   assert.equal(links[1].rel, 'noopener noreferrer');
 });
+test('the published configuration and static fallback both put House renovation first', async () => {
+  const { nodes } = await load({ config: JSON.parse(read('site.json')) });
+  assert.equal(titleOf(nodes['[data-featured-project]'].children[0]), 'House renovation');
+  assert.equal(collection[0].id, 'house-renovation');
+  const html = read('index.html');
+  const firstTitle = html.match(/<h2 class="project-title"><a[^>]*>([^<]+)/);
+  assert.equal(firstTitle[1], 'House renovation');
+});
 test('every page loads the shared tokens and configuration before its behavior', () => {
   for (const path of ['index.html', 'projects/hand-drawn-art.html', 'projects/house-renovation.html', 'course/index.html']) {
     const html = read(path);
     assert.match(html, /data-theme="parisian-gallery"/);
-    assert.match(html, /href="(?:\.\.\/)?themes.css\?v=gallery-1"/);
-    assert.match(html, /src="(?:\.\.\/)?theme.js\?v=gallery-1"/);
+    assert.match(html, /href="(?:\.\.\/)?themes.css\?v=gallery-2"/);
+    assert.match(html, /src="(?:\.\.\/)?theme.js\?v=gallery-2"/);
     assert.ok(html.indexOf('themes.css') < html.indexOf('theme.js'));
     assert.ok(html.indexOf('theme.js') < html.indexOf('defer'));
   }

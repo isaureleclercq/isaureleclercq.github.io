@@ -1,10 +1,10 @@
 /* Shared by every page; paths resolve from here, including on GitHub Pages. */
 (() => {
   const presets = Object.freeze({
-    'parisian-gallery': { title: 'A closer', emphasis: 'look.', featuredProject: 'opera-garnier' },
-    'cobalt-studio': { title: 'Ideas. Made', emphasis: 'visible.', featuredProject: 'house-renovation' },
-    'playful-sketchbook': { title: 'A little curiosity.', emphasis: 'A lot of ideas.', featuredProject: 'june-sketchbook' },
-    'midnight-atelier': { title: 'Form.', emphasis: 'In perspective.', featuredProject: 'house-renovation' }
+    'parisian-gallery': { title: 'Art &', emphasis: 'architecture.', featuredProject: 'opera-garnier' },
+    'cobalt-studio': { title: 'Art, code &', emphasis: 'design.', featuredProject: 'house-renovation' },
+    'playful-sketchbook': { title: 'A sketchbook', emphasis: '& portfolio.', featuredProject: 'june-sketchbook' },
+    'midnight-atelier': { title: 'Architecture', emphasis: '& drawing.', featuredProject: 'house-renovation' }
   });
   const configURL = new URL('site.json', document.currentScript.src);
   const applyConfig = (value) => {

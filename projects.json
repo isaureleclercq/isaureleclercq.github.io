@@ -1,8 +1,30 @@
 [
   {
+    "title": "House renovation",
+    "category": "Architecture · 3D model",
+    "description": "An architectural renovation model made in Autodesk Fusion. Open the project to explore it in 3D.",
+    "cover": "assets/house-renovation.jpg",
+    "coverAlt": "Isometric view of the house model, showing overlapping pitched roofs, dark exterior walls, and a glazed entrance.",
+    "url": "projects/house-renovation.html",
+    "links": [
+      {
+        "label": "Explore the project",
+        "url": "projects/house-renovation.html"
+      },
+      {
+        "label": "Open in Autodesk",
+        "url": "https://mystu70109.autodesk360.com/g/shares/SH90d2dQT28d5b602811bbc0bcde42f199b0"
+      }
+    ],
+    "id": "house-renovation",
+    "coverWidth": 920,
+    "coverHeight": 550,
+    "featured": true
+  },
+  {
     "title": "Opéra Garnier, Paris",
     "category": "Drawing",
-    "description": "Arches, columns, and rooftop sculptures: a detailed drawing of the Opéra Garnier in Paris.",
+    "description": "A drawing of the Opéra Garnier in Paris, including its arches, columns, and rooftop sculptures.",
     "cover": "assets/drawings/architectural-study-thumb.webp",
     "coverAlt": "Detailed hand drawing of the Opéra Garnier in Paris, with arches, columns, and rooftop sculptures.",
     "coverFit": "contain",
@@ -16,7 +38,6 @@
       }
     ],
     "id": "opera-garnier",
-    "featured": true,
     "featureCover": "assets/drawings/architectural-study.webp",
     "featureWidth": 2400,
     "featureHeight": 1905
@@ -24,7 +45,7 @@
   {
     "title": "June sketchbook",
     "category": "Sketchbook",
-    "description": "A page filled with sea creatures, flowers, animals, and small discoveries.",
+    "description": "Sketchbook drawings of sea creatures, flowers, and animals.",
     "cover": "assets/drawings/june-sketchbook-thumb.webp",
     "coverAlt": "A pencil sketchbook spread headed June, filled with sea creatures, flowers, and animals.",
     "coverFit": "contain",
@@ -43,30 +64,9 @@
     "featureHeight": 1877
   },
   {
-    "title": "House renovation",
-    "category": "Architecture · 3D model",
-    "description": "Intersecting rooflines, a glazed entrance, and a house seen from a new perspective. Explore the renovation model in three dimensions.",
-    "cover": "assets/house-renovation.jpg",
-    "coverAlt": "Isometric view of the house model, showing overlapping pitched roofs, dark exterior walls, and a glazed entrance.",
-    "url": "projects/house-renovation.html",
-    "links": [
-      {
-        "label": "Explore the project",
-        "url": "projects/house-renovation.html"
-      },
-      {
-        "label": "Open in Autodesk",
-        "url": "https://mystu70109.autodesk360.com/g/shares/SH90d2dQT28d5b602811bbc0bcde42f199b0"
-      }
-    ],
-    "id": "house-renovation",
-    "coverWidth": 920,
-    "coverHeight": 550
-  },
-  {
     "title": "First day of school",
     "category": "Comic · Two pages",
-    "description": "A school story in two hand drawn pages, told through conversations and everyday moments.",
+    "description": "A two-page comic about starting at a new school.",
     "cover": "assets/drawings/school-comic-1-thumb.webp",
     "coverAlt": "First page of a hand drawn comic about starting at a new school.",
     "coverFit": "contain",
@@ -87,7 +87,7 @@
   {
     "title": "Cat studies",
     "category": "Character sketches",
-    "description": "Curious faces, curled tails, and a handful of feline personalities in pencil.",
+    "description": "Pencil sketches of cats in different poses and expressions.",
     "cover": "assets/drawings/cat-studies-thumb.webp",
     "coverAlt": "Pencil studies of cats with different expressions and poses.",
     "coverFit": "contain",
