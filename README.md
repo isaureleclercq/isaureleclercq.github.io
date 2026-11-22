@@ -91,6 +91,8 @@ Open `http://localhost:8000/course/` for **Build your corner of the web**, an ei
 
 Each lesson includes a practical exercise, a worked solution, a knowledge check, a YouTube reference, and further reading. The course also includes an HTML/CSS workbench. Progress, exercise checkboxes, and workbench code are saved in the current browser using local storage; workbench experiments do not edit the portfolio files. Clear browser site data to reset saved course data.
 
+The [Update your content guide](course/index.html#updating-content) explains how to edit About me, add paragraphs, update project descriptions, add images and projects, and preview and publish changes. It is a reference page outside the eight-lesson progress tracker.
+
 The course lives in `course/index.html`, `course/course.css`, and `course/course.js`. It uses the same static server as the portfolio and needs no additional dependencies. All lesson text remains readable without JavaScript; interactive features require it. Videos open on YouTube. The course is published alongside the portfolio and follows the selected theme.
 
 ## Verify a change
