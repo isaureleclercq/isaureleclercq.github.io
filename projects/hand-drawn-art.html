@@ -1,24 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="parisian-gallery">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f2f0e8">
+    <meta name="theme-color" content="#faf9f6">
     <meta name="description" content="Hand drawn work by Isaure Leclercq: the Opéra Garnier in Paris, a two-page school comic, sketchbook doodles, and cat studies.">
     <title>Hand drawn art — Isaure Leclercq</title>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="hand-drawn-art.css">
+    <link rel="stylesheet" href="../themes.css?v=gallery-1">
+    <link rel="stylesheet" href="../styles.css?v=gallery-1">
+    <link rel="stylesheet" href="hand-drawn-art.css?v=gallery-1">
+    <script src="../theme.js?v=gallery-1"></script>
     <script src="hand-drawn-art.js" defer></script>
   </head>
   <body class="art-page">
     <a class="skip-link" href="#main">Skip to artwork</a>
     <header class="site-header wrap">
-      <a class="wordmark" href="../index.html" aria-label="Isaure Leclercq, home"><span class="wordmark-mark" aria-hidden="true">i.</span><span>Isaure</span></a>
+      <a class="wordmark" href="../index.html" aria-label="Isaure Leclercq, home"><span data-name-full>Isaure Leclercq</span></a>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="../index.html#work" aria-current="location">Work</a>
+        <a href="../index.html#work" aria-current="location">Selected work</a>
         <a href="../index.html#about">About</a>
-        <a href="../course/">Learn to build</a>
+        <a href="../course/">Field notes</a>
       </nav>
     </header>
     <main id="main" class="wrap">
@@ -106,6 +108,6 @@
       <img data-lightbox-image alt="">
       <a class="lightbox-original" data-full-image target="_blank" rel="noopener noreferrer">Open full-size image</a>
     </dialog>
-    <footer class="site-footer"><div class="wrap art-footer"><span>Isaure Leclercq · Sketchbook</span><a href="#art-title">Back to top</a></div></footer>
+    <footer class="site-footer wrap"><div class="art-footer"><span><span data-name-full>Isaure Leclercq</span> · Sketchbook</span><a href="#art-title">Back to top</a></div></footer>
   </body>
 </html>

@@ -1,24 +1,5 @@
 [
   {
-    "title": "House renovation",
-    "category": "Architecture · 3D model",
-    "description": "Intersecting rooflines, a glazed entrance, and a house seen from a new perspective. Explore the renovation model in three dimensions.",
-    "cover": "assets/house-renovation.jpg",
-    "coverAlt": "Isometric view of the house model, showing overlapping pitched roofs, dark exterior walls, and a glazed entrance.",
-    "url": "projects/house-renovation.html",
-    "featured": true,
-    "links": [
-      {
-        "label": "Explore the project",
-        "url": "projects/house-renovation.html"
-      },
-      {
-        "label": "Open in Autodesk",
-        "url": "https://mystu70109.autodesk360.com/g/shares/SH90d2dQT28d5b602811bbc0bcde42f199b0"
-      }
-    ]
-  },
-  {
     "title": "Opéra Garnier, Paris",
     "category": "Drawing",
     "description": "Arches, columns, and rooftop sculptures: a detailed drawing of the Opéra Garnier in Paris.",
@@ -33,24 +14,12 @@
         "label": "View the drawings",
         "url": "projects/hand-drawn-art.html#architecture"
       }
-    ]
-  },
-  {
-    "title": "First day of school",
-    "category": "Comic · Two pages",
-    "description": "A school story in two hand drawn pages, told through conversations and everyday moments.",
-    "cover": "assets/drawings/school-comic-1-thumb.webp",
-    "coverAlt": "First page of a hand drawn comic about starting at a new school.",
-    "coverFit": "contain",
-    "coverWidth": 694,
-    "coverHeight": 960,
-    "url": "projects/hand-drawn-art.html#comic",
-    "links": [
-      {
-        "label": "View the drawings",
-        "url": "projects/hand-drawn-art.html#comic"
-      }
-    ]
+    ],
+    "id": "opera-garnier",
+    "featured": true,
+    "featureCover": "assets/drawings/architectural-study.webp",
+    "featureWidth": 2400,
+    "featureHeight": 1905
   },
   {
     "title": "June sketchbook",
@@ -67,7 +36,53 @@
         "label": "View the drawings",
         "url": "projects/hand-drawn-art.html#june"
       }
-    ]
+    ],
+    "id": "june-sketchbook",
+    "featureCover": "assets/drawings/june-sketchbook.webp",
+    "featureWidth": 2400,
+    "featureHeight": 1877
+  },
+  {
+    "title": "House renovation",
+    "category": "Architecture · 3D model",
+    "description": "Intersecting rooflines, a glazed entrance, and a house seen from a new perspective. Explore the renovation model in three dimensions.",
+    "cover": "assets/house-renovation.jpg",
+    "coverAlt": "Isometric view of the house model, showing overlapping pitched roofs, dark exterior walls, and a glazed entrance.",
+    "url": "projects/house-renovation.html",
+    "links": [
+      {
+        "label": "Explore the project",
+        "url": "projects/house-renovation.html"
+      },
+      {
+        "label": "Open in Autodesk",
+        "url": "https://mystu70109.autodesk360.com/g/shares/SH90d2dQT28d5b602811bbc0bcde42f199b0"
+      }
+    ],
+    "id": "house-renovation",
+    "coverWidth": 920,
+    "coverHeight": 550
+  },
+  {
+    "title": "First day of school",
+    "category": "Comic · Two pages",
+    "description": "A school story in two hand drawn pages, told through conversations and everyday moments.",
+    "cover": "assets/drawings/school-comic-1-thumb.webp",
+    "coverAlt": "First page of a hand drawn comic about starting at a new school.",
+    "coverFit": "contain",
+    "coverWidth": 694,
+    "coverHeight": 960,
+    "url": "projects/hand-drawn-art.html#comic",
+    "links": [
+      {
+        "label": "View the drawings",
+        "url": "projects/hand-drawn-art.html#comic"
+      }
+    ],
+    "id": "school-comic",
+    "featureCover": "assets/drawings/school-comic-1.webp",
+    "featureWidth": 1735,
+    "featureHeight": 2400
   },
   {
     "title": "Cat studies",
@@ -84,6 +99,10 @@
         "label": "View the drawings",
         "url": "projects/hand-drawn-art.html#cats"
       }
-    ]
+    ],
+    "id": "cat-studies",
+    "featureCover": "assets/drawings/cat-studies.webp",
+    "featureWidth": 1591,
+    "featureHeight": 2400
   }
 ]

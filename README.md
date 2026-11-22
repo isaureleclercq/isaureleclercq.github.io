@@ -1,6 +1,30 @@
 # Isaure Leclercq — personal portfolio
 
-A small, build-tool-free portfolio for GitHub Pages. The design is an editorial project journal: warm parchment, moss green, and marigold accents, and an abstract orbit illustration. Project cards are generated from JSON, so new work can be added without editing the layout.
+A small, build-tool-free portfolio for GitHub Pages. The default Parisian Gallery design pairs warm white, charcoal, and burgundy with serif headings and uncropped artwork. Four shared themes cover the homepage, artwork gallery, Fusion model page, and course. Project cards are generated from JSON.
+
+## Switch the design
+
+Change one property in `site.json`, save, and refresh your local preview:
+
+```json
+"theme": "parisian-gallery"
+```
+
+| Value | Design | Homepage |
+| --- | --- | --- |
+| `parisian-gallery` | Warm white, burgundy, serif type | Centered introduction and Opéra Garnier feature |
+| `cobalt-studio` | Chalk, cobalt, bold sans serif | Split introduction and house model feature |
+| `playful-sketchbook` | Blush, terracotta, lilac | Playful headline, June sketchbook feature, gently tilted covers |
+| `midnight-atelier` | Ink, ivory, amber | Left-aligned serif introduction and house model feature |
+
+The theme is applied on every page by `theme.js`. It resolves `site.json` relative to the script, so nested pages and GitHub Pages subdirectories use the same configuration. Missing, invalid, or unrecognized theme settings fall back to Parisian Gallery. No dependencies or build step are required.
+
+Optional homepage overrides in `site.json`:
+
+- `featuredProject`: the `id` of a project in `projects.json`, such as `"opera-garnier"` or `"house-renovation"`. Omit it to use the theme’s default.
+- `heroTitle` and `heroEmphasis`: replace the theme’s two-part headline. Omit them to use the theme’s wording.
+
+`themes.css` holds the shared color and typography tokens. `styles.css` holds the homepage composition for each preset. Theme settings are site-wide; visitors do not need to choose a theme. To publish a configuration change, commit and push `site.json` to `main`.
 
 ## Personalize the introduction
 
@@ -13,13 +37,13 @@ Add an object to the array in `projects.json`:
 ```json
 [
   {
+    "id": "my-project",
     "title": "Project title",
     "category": "Visual identity",
     "year": "2026",
     "description": "A short, one or two sentence introduction to the project.",
     "cover": "assets/project-cover.jpg",
     "coverAlt": "A concise description of the project image",
-    "color": "#e4e6da",
     "mark": "P",
     "url": "https://example.com/project",
     "links": [
@@ -29,11 +53,13 @@ Add an object to the array in `projects.json`:
 ]
 ```
 
-Only `title` is required. `cover` is optional; when omitted, a simple typographic cover is generated using `color` and `mark`. `url` makes the cover and title clickable. Local project links stay in the same tab; external links open in a new tab. Set `featured` to `true` for a full-width project card. `links` can hold a live demo, case study, or a Google Drive share link. Check Drive sharing settings before adding a link you want visitors to open.
+Only `title` is required. Give each project a unique `id` if you want to select it as the featured project. `cover` is optional; when omitted, a typographic cover uses `mark` and the selected theme. `url` makes the cover and title clickable. Local project links stay in the same tab; external links open in a new tab. `links` can hold a live demo, case study, or a Google Drive share link. Check Drive sharing settings before adding a link you want visitors to open.
+
+The theme selects the lead project by `id`; `site.json` can override that choice with `featuredProject`. If that ID is unavailable, a project with `featured: true` is used, then the first project. The selected project appears once, followed by the remaining projects in JSON order.
 
 For Adobe work, export a web-ready cover image into `assets/` and reference it with `cover`. Keep the editable source in your Adobe app or Drive; avoid uploading large working files to the website.
 
-For drawings that should stay uncropped, set `coverFit` to `"contain"`. Optional `coverWidth` and `coverHeight` values describe the cover image dimensions.
+For drawings that should stay uncropped, set `coverFit` to `"contain"`. Optional `coverWidth` and `coverHeight` values describe the cover image dimensions. Use `featureCover`, `featureWidth`, and `featureHeight` for a larger image in the lead position. The homepage includes a complete static fallback gallery for visitors without JavaScript or when a JSON request fails; update that markup in `index.html` when changing the collection.
 
 ## Hand drawn artwork
 
@@ -43,7 +69,7 @@ The web images and original scans live in `assets/drawings/`. The PDFs were supp
 
 ## House renovation showcase
 
-The house model is featured in `projects.json`, with a dedicated page at `projects/house-renovation.html`. It uses a cover captured from the shared model and loads Autodesk’s interactive viewer when the visitor chooses **Explore in 3D**. On phones, an **Open 3D model** link opens the full Autodesk viewer instead of squeezing its controls into the page. A direct Autodesk link also remains available on desktop if the embedded viewer is unavailable. The page needs no API key or build step; the model must remain shared through Autodesk.
+The house model is listed in `projects.json`, with a dedicated page at `projects/house-renovation.html`. It uses a cover captured from the shared model and loads Autodesk’s interactive viewer when the visitor chooses **Explore in 3D**. On phones, an **Open 3D model** link opens the full Autodesk viewer instead of squeezing its controls into the page. A direct Autodesk link also remains available on desktop if the embedded viewer is unavailable. The page needs no API key or build step; the model must remain shared through Autodesk.
 
 Update the share link and iframe `data-src` in the project page if the Autodesk share changes, and recapture `assets/house-renovation.jpg` when you want a newer cover. Preview locally at `http://localhost:8000/projects/house-renovation.html`.
 
@@ -63,7 +89,11 @@ Open `http://localhost:8000/course/` for **Build your corner of the web**, an ei
 
 Each lesson includes a practical exercise, a worked solution, a knowledge check, a YouTube reference, and further reading. The course also includes an HTML/CSS workbench. Progress, exercise checkboxes, and workbench code are saved in the current browser using local storage; workbench experiments do not edit the portfolio files. Clear browser site data to reset saved course data.
 
-The course lives in `course/index.html`, `course/course.css`, and `course/course.js`. It uses the same static server as the portfolio and needs no additional dependencies. All lesson text remains readable without JavaScript; interactive features require it. Videos open on YouTube. The course has not been published until its files are committed and pushed to the publishing branch.
+The course lives in `course/index.html`, `course/course.css`, and `course/course.js`. It uses the same static server as the portfolio and needs no additional dependencies. All lesson text remains readable without JavaScript; interactive features require it. Videos open on YouTube. The course is published alongside the portfolio and follows the selected theme.
+
+## Verify a change
+
+Run `node --test tests/theme.test.cjs` to check theme loading, fallbacks, nested paths, featured-project selection, and project rendering. Check the homepage, both project pages, and the course in a browser at desktop and phone widths before publishing.
 
 ## Publish with GitHub Pages
 

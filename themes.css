@@ -1,0 +1,77 @@
+/* Shared design tokens. Choose a preset with "theme" in site.json. */
+:root {
+  color-scheme: light;
+  --paper: #faf9f6;
+  --paper-deep: #eeeae5;
+  --surface: #ffffff;
+  --ink: #242120;
+  --muted: #66615b;
+  --accent: #7b263d;
+  --accent-hover: #5f1d30;
+  --on-accent: #ffffff;
+  --line: #d9d3cb;
+  --sans: 'Avenir Next', Avenir, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --serif: Georgia, 'Times New Roman', serif;
+  --mono: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --display: var(--serif);
+  --radius: 0px;
+  --art-paper: #ffffff;
+  --model-background: #b5b5b5;
+  --overlay: #17131be6;
+  --code-background: #282326;
+  --code-header: #393036;
+  --code-ink: #faf6f8;
+  --code-muted: #d3c5ce;
+  --error: #a33131;
+  /* Aliases used by the course's interactive components. */
+  --white: var(--surface);
+  --soft: var(--paper-deep);
+  --green: var(--accent);
+  --green-soft: var(--accent-hover);
+  --yellow: var(--paper-deep);
+  --accent-ink: var(--accent);
+}
+
+:root[data-theme='cobalt-studio'] {
+  --paper: #f7f9fc;
+  --paper-deep: #dbe5fa;
+  --ink: #182334;
+  --muted: #546173;
+  --accent: #2457d6;
+  --accent-hover: #1943b0;
+  --line: #c6d2e8;
+  --display: var(--sans);
+  --radius: 3px;
+  --code-background: #182334;
+  --code-header: #25354f;
+}
+
+:root[data-theme='playful-sketchbook'] {
+  --paper: #fff9f7;
+  --paper-deep: #eae0f4;
+  --ink: #382337;
+  --muted: #705667;
+  --accent: #b44335;
+  --accent-hover: #913528;
+  --line: #d8c7dd;
+  --display: var(--sans);
+  --radius: 16px;
+}
+
+:root[data-theme='midnight-atelier'] {
+  color-scheme: dark;
+  --paper: #171b22;
+  --paper-deep: #262d39;
+  --surface: #202630;
+  --ink: #f5f3ed;
+  --muted: #bcc2cb;
+  --accent: #e6b95c;
+  --accent-hover: #f4ce82;
+  --on-accent: #171b22;
+  --line: #434b58;
+  --code-background: #10141a;
+  --code-header: #262d39;
+  --code-ink: #f5f3ed;
+  --code-muted: #bcc2cb;
+  --error: #ffb2a9;
+}
